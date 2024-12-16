@@ -2,6 +2,12 @@
     border:solid rgb(238, 19, 19);   
     
 } */
+ #gameContainer{
+    border:solid red;
+    width:80%;
+    height:90vh;
+    text-align: center;
+ }
 .grid-container{
     display:grid;   
     grid-template-columns: repeat(4,200px);   
@@ -27,3 +33,26 @@
 .grid-item.matched {
     background-color: green;
 }
+#pinInput{
+    border: solid darkblue;
+    background-color: blue;
+    color:white;
+    height:30%;
+    width:60%;
+    border-radius:5%;  
+    margin-top: 1em; 
+    font-size: 20px;
+    text-align: center;
+ }
+ ::placeholder{
+    color:white;
+    text-align:center ;
+    font-size: 15px;
+ }
+ #pinBtn{
+    width:50px;
+    border:solid darkblue;
+    background-color: blue;
+    margin-top: 5px;
+    color:white;     
+ }

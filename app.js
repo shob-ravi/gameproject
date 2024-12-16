@@ -13,7 +13,9 @@ let matchedImages = 0;
 let totalImages = imageArray.length * 2;
 let memoryGameContainerEl = document.querySelector(".memoryGameContainer");
 memoryGameContainerEl.classList.add('grid-container');
-
+let gameContainerEl = document.getElementById("gameContainer");
+gameContainerEl.innerHTML="Memory game";
+gameContainerEl.appendChild(memoryGameContainerEl);
 function StartGame()
 {
     const shuffledImages = shuffleArray([...imageArray,...imageArray]); 
@@ -35,7 +37,7 @@ function StartGame()
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
   }   
-StartGame();
+
 
 function flipImage(image) {
     if (lockBoard || image.classList.contains('flipped') || image.classList.contains('matched')) {
@@ -75,5 +77,8 @@ function flipImage(image) {
   function resetflippedImages() {
     flippedImages = [];
     lockBoard = false;
+  }
+  function okClick() {
+    StartGame();
   }
   
