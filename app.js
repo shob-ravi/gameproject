@@ -7,10 +7,14 @@ let imageArray = ["https://e1.pngegg.com/pngimages/457/896/png-clipart-icon-no-b
     "https://e7.pngegg.com/pngimages/460/521/png-clipart-color-wheel-computer-icons-rgb-color-space-international-commission-on-illumination-color-mode-rgb-miscellaneous-blue-thumbnail.png",
     "https://w7.pngwing.com/pngs/518/976/png-transparent-rgb-color-model-logo-cmyk-color-model-tricolor-logo-color-sphere-thumbnail.png"
 ]
+let lockBoard = false;
+let flippedImages = [];
+  let matchedImages = 0;
+  let totalImages = imageArray.length * 2;
 let memoryGameContainerEl = document.querySelector(".memoryGameContainer");
 memoryGameContainerEl.classList.add('grid-container');
-const shuffledImages = shuffleArray([...imageArray]); 
-imageArray.forEach((image)=>{
+const shuffledImages = shuffleArray([...imageArray,...imageArray]); 
+shuffledImages.forEach((image)=>{
     
         let gridItem = document.createElement('div');        
         memoryGameContainerEl.appendChild(gridItem);
