@@ -22,7 +22,8 @@
 }
 .grid-item{
     border:solid black;    
-   
+    /* background: url('https://cdn-icons-png.flaticon.com/512/5726/5726470.png');
+    background-size: cover; */
 }
 .grid-item img{
     

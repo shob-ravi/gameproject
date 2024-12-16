@@ -7,6 +7,7 @@ let imageArray = ["https://cdn-icons-png.flaticon.com/256/4228/4228711.png",
     "https://cdn-icons-png.flaticon.com/256/4213/4213650.png",
     "https://cdn-icons-png.flaticon.com/256/4193/4193253.png"
 ]
+
 let lockBoard = false;
 let flippedImages = [];
 let matchedImages = 0;
@@ -30,10 +31,15 @@ function StartGame()
             
 
             const img = document.createElement('img');
-            //img.src = image;
+                    
             img.src = image;
+            // img.src = questionMark;
             gridItem.appendChild(img);
-            gridItem.addEventListener('click',() => flipImage(gridItem) ) ;               
+            
+            gridItem.addEventListener('click',() => {
+                // gridItem.style.background="none"; 
+                // img.src = image;
+                flipImage(gridItem) }) ;               
    
     }); 
 }    
@@ -43,6 +49,7 @@ function shuffleArray(array) {
 
 
 function flipImage(image) {
+    
     if (lockBoard || image.classList.contains('flipped') || image.classList.contains('matched')) {
       return;
     }
@@ -52,7 +59,7 @@ function flipImage(image) {
   
     if (flippedImages.length === 2) {
       checkMatch();
-    }
+    }    
   }
   function checkMatch() {
     const firstimage = flippedImages[0];
@@ -86,7 +93,6 @@ function flipImage(image) {
      popUpEl.style.display = "none";
      lblDisplayEl.textContent="Welcome " +   userName.value ;
      lblDisplayEl.setAttribute('style','color:white;font-size:25px');
-     
-    StartGame();
+     StartGame();
   }
   
