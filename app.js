@@ -50,7 +50,7 @@ function shuffleArray(array) {
 
 
 function flipImage(image) {
-    startTimer();
+    // startTimer();
     if (lockBoard || image.classList.contains('flipped') || image.classList.contains('matched')) {
       return;
     }
@@ -72,7 +72,7 @@ function flipImage(image) {
       matchedImages += 2;
   
       if (matchedImages === totalImages) {
-        endTimer();
+        // endTimer();
         setTimeout(() => alert('Hooray, You did it!'), 300);
       }
   
