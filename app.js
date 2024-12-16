@@ -20,7 +20,7 @@ const popUpEl = document.querySelector(".popUp");
 let userName = document.getElementById("pinInput");
 const lblDisplayEl = document.getElementById("lblDisplay");
 let startTime, endTime;
-
+// start the game
 function StartGame()
 {
     const shuffledImages = shuffleArray([...imageArray,...imageArray]); 
