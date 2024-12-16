@@ -48,3 +48,31 @@ function flipImage(image) {
       checkMatch();
     }
   }
+  function checkMatch() {
+    const firstimage = flippedImages[0];
+    const secondimage = flippedImages[1];
+  
+    if (firstimage.innerHTML === secondimage.innerHTML) {
+      firstimage.classList.add('matched');
+      secondimage.classList.add('matched');
+      matchedImages += 2;
+  
+      if (matchedImages === totalImages) {
+        setTimeout(() => alert('Hooray, You did it!'), 300);
+      }
+  
+      resetflippedImages();
+    } else {
+      setTimeout(() => {
+        firstimage.classList.remove('flipped');
+        secondimage.classList.remove('flipped');
+        resetflippedImages();
+      }, 1000);
+    }
+  }
+  
+  function resetflippedImages() {
+    flippedImages = [];
+    lockBoard = false;
+  }
+  
