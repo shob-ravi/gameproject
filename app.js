@@ -1,11 +1,11 @@
-let imageArray = ["https://e1.pngegg.com/pngimages/457/896/png-clipart-icon-no-background-icon-512x512-2x-color-shade-fan.png",
-    "https://www.freeiconspng.com/thumbs/color-icons/colors-icon-4.png",
-    "https://www.freeiconspng.com/uploads/color-icon-png-13.png",
-    "https://www.pngitem.com/pimgs/m/164-1649948_start-clipart-colour-star-3-color-icon-png.png",
-    "https://e7.pngegg.com/pngimages/489/878/png-clipart-computer-icons-rgb-color-model-computer-software-others-angle-rectangle-thumbnail.png",
-    "https://www.pngfind.com/pngs/m/156-1566858_computer-icons-circle-color-encapsulated-postscript-colourful-circle.png",
-    "https://e7.pngegg.com/pngimages/460/521/png-clipart-color-wheel-computer-icons-rgb-color-space-international-commission-on-illumination-color-mode-rgb-miscellaneous-blue-thumbnail.png",
-    "https://w7.pngwing.com/pngs/518/976/png-transparent-rgb-color-model-logo-cmyk-color-model-tricolor-logo-color-sphere-thumbnail.png"
+let imageArray = ["https://cdn-icons-png.flaticon.com/256/4228/4228711.png",
+    "https://cdn-icons-png.flaticon.com/256/4228/4228703.png",
+    "https://cdn-icons-png.flaticon.com/256/4213/4213663.png",
+    "https://cdn-icons-png.flaticon.com/256/4213/4213732.png",
+    "https://cdn-icons-png.flaticon.com/256/4193/4193371.png",
+    "https://cdn-icons-png.flaticon.com/256/4193/4193310.png",
+    "https://cdn-icons-png.flaticon.com/256/4213/4213650.png",
+    "https://cdn-icons-png.flaticon.com/256/4193/4193253.png"
 ]
 let lockBoard = false;
 let flippedImages = [];
@@ -84,7 +84,9 @@ function flipImage(image) {
   function okClick() {
     gameContainerEl.style.display = "block";
      popUpEl.style.display = "none";
-     lblDisplayEl.textContent="Welcome " +   userName.value + " Memory game";
+     lblDisplayEl.textContent="Welcome " +   userName.value + " to Memory game";
+     lblDisplayEl.setAttribute('style','color:white;font-size:25px');
+     
     StartGame();
   }
   
