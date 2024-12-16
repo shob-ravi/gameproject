@@ -1,18 +1,24 @@
-let image1 = '<img src="https://media.gettyimages.com/id/1311529685/vector/abstract-retro-logos.jpg?s=612x612&w=gi&k=20&c=Tm_64SScULgt-q-1bOUHaEuCbeiZF1exwn3FHiomgao=" width=10%;/>';
+let image1 = "https://e1.pngegg.com/pngimages/457/896/png-clipart-icon-no-background-icon-512x512-2x-color-shade-fan.png";
+let image2="https://www.freeiconspng.com/thumbs/color-icons/colors-icon-4.png";
+
 let memoryGameContainerEl = document.querySelector(".memoryGameContainer");
 memoryGameContainerEl.classList.add('grid-container');
-for(let i=1;i<=16;i++)
+for (let i=1;i<=16;i++)
     {
         let gridItem = document.createElement('div');        
         memoryGameContainerEl.appendChild(gridItem);
         gridItem.classList.add('grid-item');
-        gridItem.textContent=i;
-        gridItem.addEventListener('click',()=>{
-            gridItem.textContent=image1;
+        // gridItem.textContent=i;
+
+        const img2 = document.createElement('img');
+        gridItem.appendChild(img2);
+
+        gridItem.addEventListener('click',() => {
+        img2.src = image2;
         });
         
     }
     showPic()
     {
-        gridItem.textContent="https://media.gettyimages.com/id/1311529685/vector/abstract-retro-logos.jpg?s=612x612&w=gi&k=20&c=Tm_64SScULgt-q-1bOUHaEuCbeiZF1exwn3FHiomgao=";
+        
     }

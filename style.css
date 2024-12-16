@@ -1,15 +1,22 @@
-.memoryGameContainer{
-    border:solid black;
-    width:50%;
-    height:50vh;
-    margin:auto;
-}
+/* .memoryGameContainer{
+    border:solid rgb(238, 19, 19);   
+    
+} */
 .grid-container{
-    display:grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+    display:grid;   
+    grid-template-columns: repeat(4,200px);   
+    grid-template-rows: repeat(4,200px); 
+    grid-gap:10px;
+    text-align: center;
 }
 .grid-item{
-    border:solid black;
-    margin:1em;
+    border:solid black;    
+    text-align: center;        
+}
+.grid-item img{
+    max-width: 100%;
+    max-height: 100%;   
+    height:auto;
+    object-fit: contain;
+    border:solid green;   
 }
