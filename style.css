@@ -25,10 +25,8 @@
    
 }
 .grid-item img{
-    /* max-width: 90%;
-        max-height: 90%;    */
-    width: 100%;       
-
+    
+    width: 100%;      
     object-fit: cover;
     border:solid green; 
     justify-self: center;
@@ -42,18 +40,18 @@
 }
 #pinInput{
     /* border: solid darkblue; */
-    background-color: black;
+    background-color: rgb(243, 160, 6);
     color:white;
-    height:30%;
-    width:90%;
+    height:60%; 
+    width:100%;
     border-radius:5%;  
-    margin-top: 1em; 
+    margin-top: 2em; 
     font-size: 20px;
     text-align: center;
  }
  #Display{
-    /* border: solid darkblue; */
-    background-color: black;
+     border: solid black;
+    background-color: rgb(243, 160, 6);
     color:white;
     height:10%;
     width:50%;
@@ -61,23 +59,27 @@
     margin-top: 1em; 
     font-size: 20px;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
  }
  ::placeholder{
     color:white;
     text-align:center ;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
  #pinBtn{
-    width:50px;
+    width:150px;
+    height: auto;
     /* border:solid darkblue; */
-    background-color: black;
+    background-color: rgb(243, 160, 6);
     margin-top: 5px;
     color:white;     
  }
  .popUp{
     border:solid black;
-    background-color: bisque; 
+    background-image: url("https://img.freepik.com/premium-vector/pills-frame_251819-786.jpg?ga=GA1.1.79980684.1732157449&semt=ais_hybrid"); 
+    background-size: cover;
     height:90vh;
     width:80%;
     margin-left: auto;
