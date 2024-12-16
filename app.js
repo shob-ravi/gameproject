@@ -60,6 +60,7 @@ function flipImage(image) {
     flippedImages.push(image);
   
     if (flippedImages.length === 2) {
+        lockBoard= true;
       checkMatch();
     }    
   }
