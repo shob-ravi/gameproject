@@ -21,10 +21,9 @@
     border:solid green;   
     display:none;
 }
-.img.flipped{
+.grid-item.flipped img{
     display:block;
 }
-.img.matched
-{
+.grid-item.matched {
     background-color: green;
 }

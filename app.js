@@ -25,9 +25,10 @@ function StartGame()
             
 
             const img = document.createElement('img');
+            //img.src = image;
+            img.src = image;
             gridItem.appendChild(img);
-            console.log(image);
-            gridItem.addEventListener('click',() => flipImage(image) ) ;               
+            gridItem.addEventListener('click',() => flipImage(gridItem) ) ;               
    
     }); 
 }    
