@@ -97,9 +97,9 @@ function flipImage(image) {
      lblDisplayEl.setAttribute('style','color:white;font-size:25px');
      StartGame();
   }
-  function startTimer() {
-    startTime = new Date();
-  }
+//   function startTimer() {
+//     startTime = new Date();
+//   }
 //   function endTimer() {
 //     endTime = new Date();
 //     console.log(endTime);
