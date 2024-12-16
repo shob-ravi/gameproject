@@ -43,7 +43,8 @@ function StartGame()
                 flipImage(gridItem) }) ;               
    
     }); 
-}    
+}   
+// added logic the shuffle the images 
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
   }   
@@ -62,6 +63,7 @@ function flipImage(image) {
       checkMatch();
     }    
   }
+//   Added logic to check match
   function checkMatch() {
     const firstimage = flippedImages[0];
     const secondimage = flippedImages[1];
