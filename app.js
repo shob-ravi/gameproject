@@ -13,22 +13,40 @@ let flippedImages = [];
   let totalImages = imageArray.length * 2;
 let memoryGameContainerEl = document.querySelector(".memoryGameContainer");
 memoryGameContainerEl.classList.add('grid-container');
-const shuffledImages = shuffleArray([...imageArray,...imageArray]); 
-shuffledImages.forEach((image)=>{
-    
-        let gridItem = document.createElement('div');        
-        memoryGameContainerEl.appendChild(gridItem);
-        gridItem.classList.add('grid-item');
-        
 
-        const img = document.createElement('img');
-        gridItem.appendChild(img);
-        console.log(image);
-        gridItem.addEventListener('click',() => {
-           img.src = image;
-           
-});
-});     
+function StartGame()
+{
+    const shuffledImages = shuffleArray([...imageArray,...imageArray]); 
+    shuffledImages.forEach((image)=>{
+        
+            let gridItem = document.createElement('div');        
+            memoryGameContainerEl.appendChild(gridItem);
+            gridItem.classList.add('grid-item');
+            
+
+            const img = document.createElement('img');
+            gridItem.appendChild(img);
+            console.log(image);
+            gridItem.addEventListener('click',() => {
+            img.src = image;
+            
+    });
+    }); 
+}    
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
   }   
+StartGame();
+
+function flipImage(image) {
+    if (lockBoard || image.classList.contains('flipped') || image.classList.contains('matched')) {
+      return;
+    }
+  
+    image.classList.add('flipped');
+    flippedImages.push(image);
+  
+    if (flippedImages.length === 2) {
+      checkMatch();
+    }
+  }
