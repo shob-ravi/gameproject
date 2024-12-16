@@ -19,6 +19,7 @@ gameContainerEl.appendChild(memoryGameContainerEl);
 const popUpEl = document.querySelector(".popUp");
 let userName = document.getElementById("pinInput");
 const lblDisplayEl = document.getElementById("lblDisplay");
+let startTime, endTime;
 
 function StartGame()
 {
@@ -49,7 +50,7 @@ function shuffleArray(array) {
 
 
 function flipImage(image) {
-    
+    startTimer();
     if (lockBoard || image.classList.contains('flipped') || image.classList.contains('matched')) {
       return;
     }
@@ -71,6 +72,7 @@ function flipImage(image) {
       matchedImages += 2;
   
       if (matchedImages === totalImages) {
+        endTimer();
         setTimeout(() => alert('Hooray, You did it!'), 300);
       }
   
@@ -94,5 +96,15 @@ function flipImage(image) {
      lblDisplayEl.textContent="Welcome " +   userName.value ;
      lblDisplayEl.setAttribute('style','color:white;font-size:25px');
      StartGame();
+  }
+  function startTimer() {
+    startTime = new Date();
+  }
+  function endTimer() {
+    endTime = new Date();
+    console.log(endTime);
+    console.log(startTime);
+    const elapsedTime = endTime - startTime; // Time in milliseconds
+    console.log("Elapsed time:", elapsedTime / 1000, "seconds");
   }
   
