@@ -84,7 +84,7 @@ function flipImage(image) {
   function okClick() {
     gameContainerEl.style.display = "block";
      popUpEl.style.display = "none";
-     lblDisplayEl.textContent="Welcome " +   userName.value + " to Memory game";
+     lblDisplayEl.textContent="Welcome " +   userName.value ;
      lblDisplayEl.setAttribute('style','color:white;font-size:25px');
      
     StartGame();
