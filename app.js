@@ -100,11 +100,11 @@ function flipImage(image) {
   function startTimer() {
     startTime = new Date();
   }
-  function endTimer() {
-    endTime = new Date();
-    console.log(endTime);
-    console.log(startTime);
-    const elapsedTime = endTime - startTime; // Time in milliseconds
-    console.log("Elapsed time:", elapsedTime / 1000, "seconds");
-  }
+//   function endTimer() {
+//     endTime = new Date();
+//     console.log(endTime);
+//     console.log(startTime);
+//     const elapsedTime = endTime - startTime; // Time in milliseconds
+//     console.log("Elapsed time:", elapsedTime / 1000, "seconds");
+//   }
   
