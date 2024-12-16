@@ -9,8 +9,8 @@ let imageArray = ["https://e1.pngegg.com/pngimages/457/896/png-clipart-icon-no-b
 ]
 let lockBoard = false;
 let flippedImages = [];
-  let matchedImages = 0;
-  let totalImages = imageArray.length * 2;
+let matchedImages = 0;
+let totalImages = imageArray.length * 2;
 let memoryGameContainerEl = document.querySelector(".memoryGameContainer");
 memoryGameContainerEl.classList.add('grid-container');
 
@@ -27,10 +27,8 @@ function StartGame()
             const img = document.createElement('img');
             gridItem.appendChild(img);
             console.log(image);
-            gridItem.addEventListener('click',() => {
-            img.src = image;
-            
-    });
+            gridItem.addEventListener('click',() => flipImage(image) ) ;               
+   
     }); 
 }    
 function shuffleArray(array) {
