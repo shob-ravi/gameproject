@@ -14,8 +14,11 @@ let totalImages = imageArray.length * 2;
 let memoryGameContainerEl = document.querySelector(".memoryGameContainer");
 memoryGameContainerEl.classList.add('grid-container');
 let gameContainerEl = document.getElementById("gameContainer");
-gameContainerEl.innerHTML="Memory game";
 gameContainerEl.appendChild(memoryGameContainerEl);
+const popUpEl = document.querySelector(".popUp");
+let userName = document.getElementById("pinInput");
+const lblDisplayEl = document.getElementById("lblDisplay");
+
 function StartGame()
 {
     const shuffledImages = shuffleArray([...imageArray,...imageArray]); 
@@ -79,6 +82,9 @@ function flipImage(image) {
     lockBoard = false;
   }
   function okClick() {
+    gameContainerEl.style.display = "block";
+     popUpEl.style.display = "none";
+     lblDisplayEl.textContent="Welcome " +   userName.value + " Memory game";
     StartGame();
   }
   

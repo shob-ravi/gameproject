@@ -7,24 +7,28 @@
     width:80%;
     height:90vh;
     text-align: center;
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
  }
 .grid-container{
     display:grid;   
     grid-template-columns: repeat(4,200px);   
     grid-template-rows: repeat(4,200px); 
     grid-gap:10px;
-    text-align: center;
+    place-self: center;   
 }
 .grid-item{
     border:solid black;    
-    text-align: center;        
+   
 }
 .grid-item img{
-    max-width: 100%;
-    max-height: 100%;   
+    max-width: 90%;
+    max-height: 90%;   
     height:auto;
     object-fit: contain;
-    border:solid green;   
+    border:solid green; 
+  
     display:none;
 }
 .grid-item.flipped img{
